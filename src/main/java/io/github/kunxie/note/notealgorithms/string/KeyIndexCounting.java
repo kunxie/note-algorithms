@@ -30,19 +30,20 @@ public class KeyIndexCounting {
 
     int[] count = new int[6];
 
-    for (Item item : data) {
-      // store key at count[key+1], making it convenient for step 2
+    for (var item : data) {
+      // store key at count[key+1], making easier to convert to index
+      // since the start-index for key is the sum[0...(key-1)]
       count[item.key()+1]++;
     }
     log.info("step 1: after counted index: {}", Arrays.toString(count));
 
-    for (int i = 1; i < count.length; i++) {
+    for (var i = 1; i < count.length; i++) {
       count[i] += count[i-1];
     }
     log.info("step 2: after transformed to index: {}", Arrays.toString(count));
 
-    Item[] result = new Item[data.length];
-    for (Item item : data) {
+    var result = new Item[data.length];
+    for (var item : data) {
       result[count[item.key()]++] = item;
     }
     log.info("step 3: after sorted: {}", Arrays.toString(result));

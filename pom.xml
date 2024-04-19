@@ -12,7 +12,7 @@
 
   <groupId>io.github.kunxie.note</groupId>
   <artifactId>note-algorithms</artifactId>
-  <version>2024.04.17-SNAPSHOT</version>
+  <version>2024.04.19-SNAPSHOT</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

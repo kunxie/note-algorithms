@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.Arrays;
 
+import static io.github.kunxie.note.notealgorithms.util.Utility.copy;
 import static java.util.Objects.isNull;
 
 /**
@@ -25,12 +26,12 @@ public class LSDSort {
     var result = copy(data);
     log.info("Before LSD sort: {}", Arrays.toString(result));
 
-    var count = new int[130]; // assume using ASCII 128 chars
+    var count = new int[128 + 1]; // assume using ASCII 128 chars (0~127)
     var aux = new String[data.length]; // used for storing the result in the middle
 
     // sort by char from right to left
     for (var i = data[0].length() - 1; i >= 0; --i) {
-      // step 1: get count
+      // step 1: get the count
       for (var item : result) {
         count[item.charAt(i) + 1]++;
       }
@@ -47,18 +48,6 @@ public class LSDSort {
       Arrays.fill(count, 0);
     }
     log.info("After LSD sort: {}", Arrays.toString(result));
-    return result;
-  }
-
-  /**
-   * Copies the contents of an array of strings.
-   *
-   * @param data The array of strings to be copied.
-   * @return A new array with the same contents as the input array.
-   */
-  private String[] copy(String[] data) {
-    var result = new String[data.length];
-    System.arraycopy(data, 0, result, 0, data.length);
     return result;
   }
 

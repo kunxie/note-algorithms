@@ -6,17 +6,17 @@ import org.junit.jupiter.api.Test;
 import static io.github.kunxie.note.notealgorithms.util.Utility.isSortByAsc;
 import static org.junit.jupiter.api.Assertions.*;
 
-class LSDSortTest {
+class MSDSortTest {
 
-  LSDSort lsdSort;
+  MSDSort msdSort = new MSDSort();
 
   @BeforeEach
   void init() {
-    this.lsdSort = new LSDSort();
+    this.msdSort = new MSDSort();
   }
 
   @Test
   void sort_exampleData() {
-    assertTrue(isSortByAsc(lsdSort.sort(null)), "The result array is not sorted");
+    assertTrue(isSortByAsc(msdSort.sort(null)), "The result array is not sorted");
   }
 }
