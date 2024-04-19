@@ -20,9 +20,9 @@ public class KeyIndexCounting {
    * @param data The array of items to perform key-index counting on. (immutable)
    * @return The sorted array of items.
    */
-  public Item[] run(Item[] data) {
+  public Item[] sort(Item[] data) {
     if (isNull(data)) {
-      return run(exampleData);
+      return sort(exampleData);
     }
     if (data.length == 0) {
       return new Item[0];
@@ -45,7 +45,7 @@ public class KeyIndexCounting {
     for (Item item : data) {
       result[count[item.key()]++] = item;
     }
-    log.info("step3: after sorted: {}", Arrays.toString(result));
+    log.info("step 3: after sorted: {}", Arrays.toString(result));
     return result;
   }
 
