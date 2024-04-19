@@ -33,12 +33,12 @@ public class KeyIndexCounting {
     for (var item : data) {
       // store key at count[key+1], making easier to convert to index
       // since the start-index for key is the sum[0...(key-1)]
-      count[item.key()+1]++;
+      count[item.key() + 1]++;
     }
     log.info("step 1: after counted index: {}", Arrays.toString(count));
 
     for (var i = 1; i < count.length; i++) {
-      count[i] += count[i-1];
+      count[i] += count[i - 1];
     }
     log.info("step 2: after transformed to index: {}", Arrays.toString(count));
 
@@ -51,28 +51,33 @@ public class KeyIndexCounting {
   }
 
   /**
+   *
+   */
+  static final int RADIX = 4;
+
+  /**
    * An array of items used for testing key-index counting by default.
    */
   static Item[] exampleData = new Item[]{
-      new Item("Anderson", 2),
-      new Item("Brown", 3),
-      new Item("Davis", 3),
-      new Item("Garcia", 4),
-      new Item("Harris", 1),
-      new Item("Jackson", 3),
-      new Item("Johnson", 4),
-      new Item("Jones", 3),
-      new Item("Martin", 1),
-      new Item("Martinez", 2),
-      new Item("Miller", 2),
-      new Item("Moore", 1),
-      new Item("Robinson", 2),
-      new Item("Smith", 4),
-      new Item("Taylor", 3),
-      new Item("Thomas", 4),
-      new Item("Thompson", 4),
-      new Item("White", 2),
-      new Item("Williams", 2),
-      new Item("Wilson", 4),
+      new Item(2, "Anderson"),
+      new Item(3, "Brown"),
+      new Item(3, "Davis"),
+      new Item(4, "Garcia"),
+      new Item(1, "Harris"),
+      new Item(3, "Jackson"),
+      new Item(4, "Johnson"),
+      new Item(3, "Jones"),
+      new Item(1, "Martin"),
+      new Item(2, "Martinez"),
+      new Item(2, "Miller"),
+      new Item(1, "Moore"),
+      new Item(2, "Robinson"),
+      new Item(4, "Smith"),
+      new Item(3, "Taylor"),
+      new Item(4, "Thomas"),
+      new Item(4, "Thompson"),
+      new Item(2, "White"),
+      new Item(2, "Williams"),
+      new Item(4, "Wilson"),
   };
 }
