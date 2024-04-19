@@ -4,7 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.Arrays;
 
-import static io.github.kunxie.note.notealgorithms.util.Utility.copy;
 import static java.util.Objects.isNull;
 
 /**
@@ -23,7 +22,7 @@ public class LSDSort {
       return new String[0];
     }
 
-    var result = copy(data);
+    var result = Arrays.copyOf(data, data.length);
     log.info("Before LSD sort: {}", Arrays.toString(result));
 
     var count = new int[128 + 1]; // assume using ASCII 128 chars (0~127)
