@@ -2,24 +2,27 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-
+  <!--https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent-->
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.2.4</version>
+    <version>3.4.0</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
 
   <groupId>io.github.kunxie.note</groupId>
   <artifactId>note-algorithms</artifactId>
-  <version>2024.04.19-SNAPSHOT</version>
+  <version>2024.12.02-SNAPSHOT</version>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.build.sourceEncoding>${sourceEncoding.version}</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>${sourceEncoding.version}</project.reporting.outputEncoding>
 
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
+
     <java.version>21</java.version>
+    <sourceEncoding.version>UTF-8</sourceEncoding.version>
   </properties>
 
   <dependencies>
@@ -33,12 +36,11 @@
       <artifactId>lombok</artifactId>
       <scope>provided</scope>
     </dependency>
-    <!-- JUnit 5 https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>
-
 </project>
