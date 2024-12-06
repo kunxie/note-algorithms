@@ -21,7 +21,8 @@ class MergeSortTest {
   void init() {
     this.sortMethods = List.of(
         new QuickSort(),
-        new MergeSort()
+        new MergeSort(),
+        new HeapSort()
     );
   }
 
@@ -29,9 +30,9 @@ class MergeSortTest {
   @MethodSource("arrayProvider")
   void sort(Integer[] array) {
     for (Sort<Integer> sortMethod : sortMethods) {
-      logArray("before sort", array);
+      logArray(sortMethod.getClass().getName() + " - before sort", array);
       sortMethod.sort(array);
-      logArray("after sort", array);
+      logArray(sortMethod.getClass().getName() + " - after sort", array);
       assertTrue(SortUtils.isAscend(array));
     }
   }
