@@ -1,4 +1,8 @@
 package io.github.kunxie.note.notealgorithms.array;
 
-public interface List {
+/**
+ * The interface for 
+ * @param <T>
+ */
+public interface ResizableList<T> {
 }

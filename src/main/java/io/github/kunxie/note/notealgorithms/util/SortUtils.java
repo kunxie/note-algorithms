@@ -1,4 +1,4 @@
-package io.github.kunxie.note.notealgorithms.sort;
+package io.github.kunxie.note.notealgorithms.util;
 
 public class SortUtils {
 
