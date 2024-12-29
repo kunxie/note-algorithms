@@ -1,9 +1,9 @@
 package io.github.kunxie.note.notealgorithms.sort;
 
-class QuickSortTest extends AbstractSortTest {
+public class MergeSortTest extends AbstractSortTest {
 
     @Override
     protected Sort<Integer> getSortImplementation() {
-        return new QuickSort();
+        return new MergeSort();
     }
 }
