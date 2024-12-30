@@ -66,9 +66,9 @@ public abstract class AbstractSortTest {
     static Stream<Arguments> sortTestProvider() {
         return Stream.of(
             Arguments.of((Object) getRandomArray(10)),
+            Arguments.of((Object) getRandomArray(1_00)),
             Arguments.of((Object) getRandomArray(1_000)),
             Arguments.of((Object) getRandomArray(10_000)),
-            Arguments.of((Object) getRandomArray(50_000)),
             Arguments.of((Object) getRandomArray(100_000))
         );
     }
