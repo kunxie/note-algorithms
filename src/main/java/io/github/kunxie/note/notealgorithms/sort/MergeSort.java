@@ -4,6 +4,7 @@ public class MergeSort implements Sort<Integer> {
 
   @Override
   public void sort(Integer[] array) {
+    // using disposable arrays is not the efficient Java implementation.
     var helpArray = new Integer[array.length];
     sort(array, 0, array.length - 1, helpArray);
   }

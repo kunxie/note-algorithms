@@ -6,13 +6,13 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.4.0</version>
+    <version>3.4.1</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
 
   <groupId>io.github.kunxie.note</groupId>
   <artifactId>note-algorithms</artifactId>
-  <version>2024.12.02-SNAPSHOT</version>
+  <version>2025.01.01-SNAPSHOT</version>
 
   <properties>
     <project.build.sourceEncoding>${sourceEncoding.version}</project.build.sourceEncoding>
