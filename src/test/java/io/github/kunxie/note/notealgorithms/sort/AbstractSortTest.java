@@ -50,14 +50,14 @@ public abstract class AbstractSortTest {
         sortMethod.sort(inputArray);
         final var end = System.currentTimeMillis();
 
-        assertTrue(SortUtils.isAscend(inputArray));
-
         log.info("For {} with size {} array for {} ms: -- array:{}",
             sortMethod.getClass().getSimpleName(),
             inputArray.length,
             end - start,
             strWithLimit(Arrays.toString(inputArray), 1_000)
         );
+
+        assertTrue(SortUtils.isAscend(inputArray));
     }
 
     /**
