@@ -1,6 +1,6 @@
 package io.github.kunxie.note.notealgorithms.sort;
 
-class QuickSortTest extends AbstractSortTest {
+class QuickSortTest extends AbstractComparisonSortTest {
 
     @Override
     protected Sort<Integer> getSortImplementation() {

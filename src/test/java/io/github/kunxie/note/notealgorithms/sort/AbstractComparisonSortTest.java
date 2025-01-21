@@ -29,7 +29,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @Slf4j
 // Ensures parallel execution
 @Execution(ExecutionMode.CONCURRENT)
-public abstract class AbstractSortTest {
+public abstract class AbstractComparisonSortTest {
 
     /**
      * Provide the specific sort implementation to be tested.
